@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:food_app/models/categories_screen.dart';
+import 'package:food_app/categories_screen.dart';
+import 'food_page.dart';
+import 'models/category.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,8 +15,27 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      initialRoute: '/',
+      routes: {
+        '/CategoriesScreen': (context) => CategoriesScreen(),
+        '/FoodPage': (context) => FoodPage(Category(0, " ", Colors.white)),
+      },
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        fontFamily: "Itim",
+        textTheme: ThemeData.light().textTheme.copyWith(
+          bodyText1: TextStyle(
+            color: Color.fromRGBO(20, 52, 52, 1)
+          ),
+          bodyText2: TextStyle(
+              color: Color.fromRGBO(20, 52, 52, 1)
+          ),
+          headline6: TextStyle(
+            fontSize: 25,
+            fontFamily: "Sunshiney",
+            color: Colors.white
+          )
+        )
       ),
       home: Scaffold(
         appBar: AppBar(

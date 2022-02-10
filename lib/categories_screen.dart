@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:food_app/models/category_item.dart';
-import 'package:food_app/models/fake_data.dart';
+import 'package:food_app/category_item.dart';
+import 'package:food_app/fake_data.dart';
 
 class CategoriesScreen extends StatelessWidget {
 
@@ -12,7 +12,7 @@ class CategoriesScreen extends StatelessWidget {
 
       gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
         maxCrossAxisExtent: 300,
-        childAspectRatio: 4/2,
+        childAspectRatio: 3/3,
         crossAxisSpacing: 10,
         mainAxisSpacing: 10,
       ),
